@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<style>
+  #linkOutput{
+    width:20%;
+  }
+</style>
+<div class="centered">
+<label for="nameInput">Wpisz imię:</label>
+<br>
+<input type="text" id="nameInput" oninput="updateLink()">
+<br>
+<label for="linkOutput">Twój link:</label>
+<br>
+<input type="text" id="linkOutput" readonly>   
+</div>
+
+
+<script>
+function updateLink() {
+  // Pobieramy wartość wpisaną w polu tekstowym
+  var name = document.getElementById("nameInput").value;
+
+  // Tworzymy link z podanym imieniem
+  var link = "127.0.0.1/valentine?imie=" + name;
+
+  // Ustawiamy wartość pola tekstowego linku na wygenerowany link
+  document.getElementById("linkOutput").value = link;
+}
+</script>
+
+<div class="signature">
+    <p>Stworzono i udostępniono <i class="much-heart"></i> przez <a href="">ByteStudio IT</a></p>
+</div>
