@@ -13,11 +13,22 @@
 <br>
 <label for="linkOutput">Twój link:</label>
 <br>
-<input type="text" id="linkOutput" readonly>   
+<input type="text" id="linkOutput" readonly>
+<br>
+<br>
+<button onclick="copyText()">Skopiuj link</button>
+<br>
+<text id="info" style="color: white"></text> 
 </div>
 
 
 <script>
+  function copyText() {
+  var input = document.getElementById("linkOutput");
+  input.select();
+  document.execCommand("copy");
+  document.getElementById('info').textContent = "Link został skopiowany do schowka!";
+}
 function updateLink() {
   // Pobieramy wartość wpisaną w polu tekstowym
   var name = document.getElementById("nameInput").value;
@@ -31,5 +42,5 @@ function updateLink() {
 </script>
 
 <div class="signature">
-    <p>Stworzono i udostępniono <i class="much-heart"></i> przez <a href="">ByteStudio IT</a></p>
+    <p>Stworzono i udostępniono <i class="much-heart"></i> przez <a href="xcenqx.github.io">ByteStudio IT</a></p>
 </div>
