@@ -1,13 +1,25 @@
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<div class="centered" id="centered">
-    <h4><text id="imie"></text>, Zostaniesz moją walentynką?</h4><input class="no" type="checkbox" name="answer" id="No" /><label class="no" for="No">Nie</label><input class="yes" type="checkbox" name="answer" id="Yes" /><label class="yes" for="Yes">Tak</label>
-    <div class="answer--yes"></div>
-    <div class="answer--no"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Walentynki 2024">
+  <meta property="og:description" content="Personalizowana Kartka Walentynkowa 2024">
+  <meta property="og:image" content="open_img.png">
+  <link rel="icon" type="image/x-icon" href="w_ico.png">
+  <title>Walentynka 2024</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="centered" id="centered">
+    <h4><text id="imie" style="text-transform: capitalize;"></text>, Zostaniesz moją walentynką?</h4><input class="no" type="checkbox" name="answer" id="No" onclick="powieksz()" /><label class="no" id="nie" for="No">Nie</label><input class="yes" type="checkbox" name="answer" id="Yes" id="tak" onclick="przenies()" /><label class="yes" for="Yes" id="tak">Tak</label>
+    
+    
 </div>
 <div class="centered">
     <h4 id="none"></h4>
+    <h2 id="link"></h2>
 </div>
 
 <div class="signature">
@@ -23,7 +35,20 @@
       document.getElementById('imie').textContent = imie;
     } else {
       document.getElementById('none').textContent = 'Niepoprawny adres URL';
+      document.getElementById('link').innerHTML = '<a href="/valentine">Wróć do strony Głównej</a>';
       document.getElementById('centered').style.display = "none";
       
     }
+    function powieksz() {
+            // Powiększenie przycisku
+            var przycisk = document.getElementById('tak');
+            przycisk.style.fontSize = (parseInt(window.getComputedStyle(przycisk).fontSize) + 10) + "px";
+            przycisk.style.width = (parseInt(window.getComputedStyle(przycisk).width) + 20) + "px"; // Dodatkowe 10 pikseli szerokości
+            przycisk.style.height = (parseInt(window.getComputedStyle(przycisk).height) + 19) + "px"; // Dodatkowe 10 pikseli wysokości
+        }
+        function przenies() {
+            window.location.href = "odpowiedz?imie=" + imie;
+        }
   </script>
+</body>
+</html>
