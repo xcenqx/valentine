@@ -1,0 +1,75 @@
+svg path.linear-1 {
+    stroke: white;
+    filter: url(#blur-filter);
+  }
+  
+  .loading {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+  
+  .loading svg {
+    height: 500px;
+    width: 100%;
+    padding-right: 20px;
+  }
+  
+  .loading .linear-1 {
+    stroke-dasharray: 281;
+    animation: dash-1 6s infinite linear forwards;
+  }
+  
+  .loading .linear-2 {
+    stroke-dasharray: 300;
+    animation: dash-2 5s infinite linear forwards;
+  }
+  
+  .loading .linear-3 {
+    stroke-dasharray: 340;
+    animation: dash-3 4s infinite linear forwards;
+  }
+  
+  .loading .linear-4 {
+    stroke-dasharray: 400;
+    animation: dash-4 3s infinite linear forwards;
+  }
+  
+  /* Animation */
+  @keyframes dash-1 {
+    from {
+      stroke-dashoffset: 814;
+    }
+    to {
+      stroke-dashoffset: -814;
+    }
+  }
+  
+  @keyframes dash-2 {
+    from {
+      stroke-dashoffset: 900;
+    }
+    to {
+      stroke-dashoffset: -900;
+    }
+  }
+  
+  @keyframes dash-3 {
+    from {
+      stroke-dashoffset: 1020;
+    }
+    to {
+      stroke-dashoffset: -1020;
+    }
+  }
+  
+  @keyframes dash-4 {
+    from {
+      stroke-dashoffset: 1200;
+    }
+    to {
+      stroke-dashoffset: -1200;
+    }
+  }

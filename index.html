@@ -6,6 +6,7 @@
   #linkOutput{
     width:20%;
   }
+
 </style>
 <div class="centered">
 <label for="nameInput">Wpisz imię:</label>
@@ -20,6 +21,7 @@
 <button onclick="copyText()">Skopiuj link</button>
 <br>
 <text id="info" style="color: white"></text> 
+
 </div>
 
 
@@ -35,7 +37,7 @@ function updateLink() {
   var name = document.getElementById("nameInput").value;
 
   // Tworzymy link z podanym imieniem
-  var link = "xcenqx.github.io/valentine/valentine?imie=" + name;
+  var link = "192.168.0.100/1/valentine?imie=" + name;
 
   // Ustawiamy wartość pola tekstowego linku na wygenerowany link
   document.getElementById("linkOutput").value = link;
@@ -43,5 +45,5 @@ function updateLink() {
 </script>
 
 <div class="signature">
-    <p>Stworzono i udostępniono <i class="much-heart"></i> przez <a href="xcenqx.github.io">ByteStudio IT</a></p>
+    <p>Stworzono i udostępniono <i class="much-heart"></i> przez <a href="">ByteStudio IT</a></p>
 </div>
